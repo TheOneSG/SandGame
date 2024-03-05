@@ -577,6 +577,8 @@ MonoBehaviour:
   Face: {fileID: 1808091790}
   Crying: {fileID: 952247858}
   winner: 0
+  defaultX: 3
+  defaultX2: 2.66
 --- !u!4 &335802394
 Transform:
   m_ObjectHideFlags: 0
@@ -1322,6 +1324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crying2
       objectReference: {fileID: 0}
+    - target: {fileID: 4337648867539666426, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1339,9 +1345,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Face2
       objectReference: {fileID: 0}
+    - target: {fileID: 223762150073181944, guid: f33d334f44385b4408321a004e6b64be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
       propertyPath: m_LocalPosition.y
