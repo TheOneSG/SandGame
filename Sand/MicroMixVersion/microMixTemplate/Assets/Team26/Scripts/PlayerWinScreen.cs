@@ -15,10 +15,13 @@ public class PlayerWinScreen : MonoBehaviour
     public float winner = 0;
 
     private bool moveEnd = false;
-    public float timer = 0;
 
+    public float timer = 0;
+    public int speed = 5;
     public float defaultX = 3f;
     public float defaultX2 = 2.66f;
+
+    private bool winnerDecided;
 
 
     void Start()
@@ -33,61 +36,124 @@ public class PlayerWinScreen : MonoBehaviour
             Debug.Log("empty Crying");
         }
 
-        
-
+        winnerDecided = false;
         moveEnd = false;
 
-        if(winner == 1)
-        {
-            Face.transform.position = new Vector3(defaultX, 1.6f, -3);
-            Crying.transform.position = new Vector3(defaultX2, -0.14f, -2);
-        }
+        Face.SetActive(false);
+        Crying.SetActive(false);
 
-        if (winner == 2)
-        {
-            Face.transform.position = new Vector3(-defaultX, 1.6f, -3);
-            Crying.transform.position = new Vector3(-defaultX2, -0.14f, -2);
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(winner == 1)
+        //Checks if the winner has been decided
+        if (winnerDecided == false)
         {
-            if (Face.transform.position.x > -defaultX)
+            //Sets default positions for win player 1
+            if (winner == 1)
             {
-                Face.transform.position += Vector3.left * Time.deltaTime * 5;   
+                //Activates Faces
+                Face.SetActive(true);
+                Crying.SetActive(true);
+
+                //Places faces
+                Face.transform.position = new Vector3(defaultX, 1.6f, -3);
+                Crying.transform.position = new Vector3(defaultX2, -0.14f, -2);
+
+                //Runs Victory animation
+                winnerDecided = true;
             }
-            else
+
+            //Sets default positions for win player 2
+            if (winner == 2)
             {
-                moveEnd = true;
+                //Activates faces
+                Face.SetActive(true);
+                Crying.SetActive(true);
+
+                //Places faces
+                Face.transform.position = new Vector3(-defaultX, 1.6f, -3);
+                Crying.transform.position = new Vector3(-defaultX2, -0.14f, -2);
+
+                //Runs victory animation
+                winnerDecided = true;
             }
+        }
 
-            if(moveEnd == true)
+        //Runs this when winner has been decided
+        else
+        {
+            if (winner == 1)
             {
-                timer += Time.deltaTime;
-                if(timer > 0.5){
-
-                    //deactivate child Face.GetChild
-                    Face.transform.GetChild(0).gameObject.SetActive(false);
-
-                    //Deactivate child crying.getchild
-                    Crying.transform.GetChild(0).gameObject.SetActive(false);
-                }
-
-                if(timer > 2)
+                //Checks if it is past the proper location
+                if (Face.transform.position.x > -defaultX)
                 {
-                    //End Scene
-                    Debug.Log("Scene End");
+                    //Moves at specified rate
+                    Face.transform.position += Vector3.left * Time.deltaTime * speed;
+                }
+                else
+                {
+                    //Ends movement loop
+                    moveEnd = true;
+                }
+
+                if (moveEnd == true)
+                {
+                    //Switches faces at specific times then ends scene
+                    timer += Time.deltaTime;
+                    if (timer > 0.5)
+                    {
+
+                        //deactivate child Face.GetChild
+                        Face.transform.GetChild(0).gameObject.SetActive(false);
+
+                        //Deactivate child crying.getchild
+                        Crying.transform.GetChild(0).gameObject.SetActive(false);
+                    }
+
+                    if (timer > 2)
+                    {
+                        //End Scene
+                        Debug.Log("Scene End");
+                    }
+                }
+            }
+
+            //Same as winner 1 but the other direction
+            else if (winner == 2)
+            {
+                if (Face.transform.position.x < defaultX)
+                {
+                    Face.transform.position += Vector3.right * Time.deltaTime * speed;
+                }
+                else
+                {
+                    moveEnd = true;
+                }
+
+                if (moveEnd == true)
+                {
+                    timer += Time.deltaTime;
+                    if (timer > 0.5)
+                    {
+
+                        //deactivate child Face.GetChild
+                        Face.transform.GetChild(0).gameObject.SetActive(false);
+
+                        //Deactivate child crying.getchild
+                        Crying.transform.GetChild(0).gameObject.SetActive(false);
+                    }
+
+                    if (timer > 2)
+                    {
+                        //End Scene
+                        Debug.Log("Scene End");
+                    }
                 }
             }
         }
-        else if(winner == 2)
-        {
-            
-        }
-
         
     }
 }
