@@ -17,7 +17,11 @@ namespace team26 {
         public int score;
         public GameObject mySandcastle;
         public TextMeshProUGUI myScore;
-        private int lastButton; 
+        public GameObject otherPlayer;
+        public GameObject winDecider;
+
+        private int lastButton;
+        private float p2Score;
         
         
         void Start()
@@ -57,17 +61,26 @@ namespace team26 {
             //Debug.Log("eat sand! button 2");
             if(lastButton == 1)
             {
-                mySandcastle.GetComponent<Sandcastle>().eatSand(20);
+                mySandcastle.GetComponent<Sandcastle>().eatSand(50);
                 score += 20;
             }
             else
             {
-                mySandcastle.GetComponent<Sandcastle>().eatSand(10);
+                mySandcastle.GetComponent<Sandcastle>().eatSand(25);
                 score += 10;
             }
             
 
             lastButton = 2;
         }
+        protected override void OnTimesUp()
+        {
+            if (amPlayer1)
+            {
+                p2Score = otherPlayer.GetComponent<PlayerController>().score;
+                winDecider.GetComponent<PlayerWinScreen>().setWinner(score, p2Score);
+            }
+        }
+            
     }
 }

@@ -25,7 +25,16 @@ namespace team26
 
         private bool winnerDecided;
 
-
+        public void setWinner(float player1Score, float player2Score){
+            if(player1Score > player2Score)
+            {
+                winner = 1;
+            }
+            else
+            {
+                winner = 2;
+            }
+            }
         void Start()
         {
             if (Face == null)
@@ -95,7 +104,7 @@ namespace team26
                     if (Face.transform.position.x > -defaultX)
                     {
                         //Moves at specified rate
-                        Face.transform.position += Vector3.left * Time.deltaTime * speed;
+                        Face.transform.position += Vector3.left;
                     }
                     else
                     {
@@ -130,7 +139,7 @@ namespace team26
                 {
                     if (Face.transform.position.x < defaultX)
                     {
-                        Face.transform.position += Vector3.right * Time.deltaTime * speed;
+                        Face.transform.position += Vector3.right;
                     }
                     else
                     {

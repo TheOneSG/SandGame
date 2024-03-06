@@ -73,7 +73,7 @@ namespace team26
         }
         public void eatSand(float sandAmount)
         {
-            scaleDiff = -sandAmount/1000;
+            scaleDiff = -sandAmount/5000;
             scaleTarget = (gameObject.transform.localScale.x + scaleDiff);
             sandLeft -= sandAmount;
         }
