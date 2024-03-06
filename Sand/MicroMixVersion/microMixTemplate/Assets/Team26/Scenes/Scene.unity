@@ -157,6 +157,7 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 473394531}
   myScore: {fileID: 109856612}
+  animator: {fileID: 0}
   otherPlayer: {fileID: 1834890385}
   winDecider: {fileID: 97680924}
 --- !u!4 &69041995
@@ -1253,6 +1254,7 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 280534702}
   myScore: {fileID: 900413084}
+  animator: {fileID: 0}
   otherPlayer: {fileID: 69041993}
   winDecider: {fileID: 538068152}
 --- !u!4 &1834890387
@@ -2319,16 +2321,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1785544186808137120, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7832402
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785544186808137120, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7832402
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785544186808137120, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7832402
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785544186808137120, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.66
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: 1785544186808137120, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13862
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 1785544186808137120, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -1.701
       objectReference: {fileID: 0}
     - target: {fileID: 1785544186808137120, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3100,6 +3114,7 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 473394531}
   myScore: {fileID: 109856612}
+  animator: {fileID: 0}
   otherPlayer: {fileID: 7960507682119613729}
   winDecider: {fileID: 97680924}
 --- !u!4 &4471085051106344614
@@ -4492,6 +4507,7 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 280534702}
   myScore: {fileID: 900413084}
+  animator: {fileID: 0}
   otherPlayer: {fileID: 4407461992801814322}
   winDecider: {fileID: 97680924}
 --- !u!1001 &8024855829800524267
@@ -4515,12 +4531,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9158943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.9158943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.9158943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.38
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
       propertyPath: m_LocalPosition.z
