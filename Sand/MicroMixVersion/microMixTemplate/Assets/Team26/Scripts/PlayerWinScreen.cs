@@ -96,6 +96,7 @@ namespace team26
             //Runs this when winner has been decided
             else
             {
+                CameraShaker.intensity = 0;
                 ReportGameCompletedEarly();
 
                 if (winner == 1)
