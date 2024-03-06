@@ -21,6 +21,9 @@ namespace team26 {
         public Animator animator;
         public GameObject otherPlayer;
         public GameObject winDecider;
+        public GameObject mouthSand;
+        public GameObject arm1Sand;
+        public GameObject arm2Sand;
 
         private float p2Score;
         
@@ -47,16 +50,20 @@ namespace team26 {
             if (mySandcastle.GetComponent<Sandcastle>().sandLeft > 0)
             {
                 animator.SetTrigger("Left");
+                mouthSand.GetComponent<ParticleSystem>().Play();
+                arm1Sand.GetComponent<ParticleSystem>().Play();
                 //Debug.Log("eat sand! button 1");
                 if (lastButton == 2)
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(2);
                     score += 2;
+                    CameraShaker.intensity += 2;
                 }
                 else
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(1);
                     score += 1;
+                    CameraShaker.intensity += 1;
                 }
                 lastButton = 1;
             }
@@ -71,17 +78,21 @@ namespace team26 {
         {
             if (mySandcastle.GetComponent<Sandcastle>().sandLeft > 0)
             {
+                mouthSand.GetComponent<ParticleSystem>().Play();
+                arm2Sand.GetComponent<ParticleSystem>().Play();
                 animator.SetTrigger("Right");
                 //Debug.Log("eat sand! button 2");
                 if (lastButton == 1)
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(2);
                     score += 2;
+                    CameraShaker.intensity += 2;
                 }
                 else
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(1);
                     score += 1;
+                    CameraShaker.intensity += 1;
                 }
 
 
