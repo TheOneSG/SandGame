@@ -25,6 +25,8 @@ MonoBehaviour:
   twoPlayerScenePath: Assets/Team26/Scenes/Scene.unity
   postgameMessages:
   - Have your sand, and eat it too!
+  - Hungry for some more?
+  - Great with salt!
   bannerImage: {fileID: 0}
   developerCredits:
   - Joshua Hargobind
