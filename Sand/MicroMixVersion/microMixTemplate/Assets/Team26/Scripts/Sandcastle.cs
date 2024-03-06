@@ -11,6 +11,8 @@ namespace team26
         private float scaleTarget;
         private float scaleDiff;
         public float sandLeft;
+
+        public GameObject[] castleStateObjects;
         
         // Start is called before the first frame update
         void Start()
@@ -18,8 +20,13 @@ namespace team26
         scaleTimeFactor = 4;
         scaleTarget = 1;
         scaleDiff = 0;
-        sandLeft = 1000;
-    }
+        sandLeft = 10000;
+        foreach (GameObject i in castleStateObjects){
+                i.SetActive(false);
+            } 
+            
+            castleStateObjects[0].SetActive(true);
+        }
 
         // Update is called once per frame
         void Update()
@@ -32,11 +39,43 @@ namespace team26
             {
                 scaleDiff = 0;
             }
+
+            if (sandLeft < 500)
+            {
+                Debug.Log("castlechange5");
+                castleStateObjects[4].SetActive(false);
+                
+            }
+            else if (sandLeft < 2000)
+            {
+                Debug.Log("castlechange4");
+                castleStateObjects[3].SetActive(false);
+                castleStateObjects[4].SetActive(true);
+            } else if (sandLeft < 4000)
+            {
+                Debug.Log("castlechange3");
+                castleStateObjects[2].SetActive(false);
+                castleStateObjects[3].SetActive(true);
+            } else if (sandLeft < 6000)
+            {
+                Debug.Log("castlechange2");
+                castleStateObjects[1].SetActive(false);
+                castleStateObjects[2].SetActive(true);
+
+            } else if (sandLeft < 8000)
+            {
+                Debug.Log("castlechange1");
+                castleStateObjects[0].SetActive(false);
+                castleStateObjects[1].SetActive(true);
+
+            }
+
         }
         public void eatSand(float sandAmount)
         {
-             scaleDiff = -sandAmount/1000;
+            scaleDiff = -sandAmount/1000;
             scaleTarget = (gameObject.transform.localScale.x + scaleDiff);
+            sandLeft -= sandAmount;
         }
     }
 }

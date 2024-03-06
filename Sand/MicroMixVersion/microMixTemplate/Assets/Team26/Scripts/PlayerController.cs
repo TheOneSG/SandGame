@@ -38,7 +38,7 @@ namespace team26 {
         }
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context) {
-            Debug.Log("eat sand! button 1");
+            //Debug.Log("eat sand! button 1");
             if (lastButton == 2)
             {
                 mySandcastle.GetComponent<Sandcastle>().eatSand(20);
@@ -54,7 +54,7 @@ namespace team26 {
 
         protected override void OnButton2Pressed(InputAction.CallbackContext context)
         {
-            Debug.Log("eat sand! button 2");
+            //Debug.Log("eat sand! button 2");
             if(lastButton == 1)
             {
                 mySandcastle.GetComponent<Sandcastle>().eatSand(20);
