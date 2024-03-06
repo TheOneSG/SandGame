@@ -17,6 +17,8 @@ namespace team26 {
         public int score;
         public GameObject mySandcastle;
         public TextMeshProUGUI myScore;
+        private int lastButton; 
+        Animator animator;
         public GameObject otherPlayer;
         public GameObject winDecider;
 
@@ -28,6 +30,7 @@ namespace team26 {
     
         {
             score = 0; 
+            animator = GetComponent<Animator>();
        
         }
 
@@ -42,6 +45,8 @@ namespace team26 {
         }
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context) {
+
+            animator.SetTrigger("Left");
             //Debug.Log("eat sand! button 1");
             if (lastButton == 2)
             {
@@ -58,8 +63,10 @@ namespace team26 {
 
         protected override void OnButton2Pressed(InputAction.CallbackContext context)
         {
+
+            animator.SetTrigger("Right");
             //Debug.Log("eat sand! button 2");
-            if(lastButton == 1)
+            if (lastButton == 1)
             {
                 mySandcastle.GetComponent<Sandcastle>().eatSand(50);
                 score += 20;
