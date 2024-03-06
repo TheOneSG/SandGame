@@ -30,12 +30,12 @@ namespace team26
         {
             if (Face == null)
             {
-                Debug.Log("empty Face");
+                Debug.LogError("Empty Face");
             }
 
             if (Crying == null)
             {
-                Debug.Log("empty Crying");
+                Debug.LogError("Empty Crying");
             }
 
             winnerDecided = false;
