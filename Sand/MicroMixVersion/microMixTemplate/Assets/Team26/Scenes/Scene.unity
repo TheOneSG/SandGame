@@ -157,6 +157,8 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 473394531}
   myScore: {fileID: 109856612}
+  otherPlayer: {fileID: 1834890385}
+  winDecider: {fileID: 97680924}
 --- !u!4 &69041995
 Transform:
   m_ObjectHideFlags: 0
@@ -172,6 +174,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &97680924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7148455865708597093, guid: ffb31fce29c7a5243859ccf92fe7bdcc, type: 3}
+  m_PrefabInstance: {fileID: 5740412179167346568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &109856610
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &280534703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -565,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &473394532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1210,6 +1217,8 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 280534702}
   myScore: {fileID: 900413084}
+  otherPlayer: {fileID: 69041993}
+  winDecider: {fileID: 538068152}
 --- !u!4 &1834890387
 Transform:
   m_ObjectHideFlags: 0
@@ -3055,6 +3064,8 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 473394531}
   myScore: {fileID: 109856612}
+  otherPlayer: {fileID: 7960507682119613729}
+  winDecider: {fileID: 97680924}
 --- !u!4 &4471085051106344614
 Transform:
   m_ObjectHideFlags: 0
@@ -4445,6 +4456,8 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 280534702}
   myScore: {fileID: 900413084}
+  otherPlayer: {fileID: 4407461992801814322}
+  winDecider: {fileID: 97680924}
 --- !u!1001 &8024855829800524267
 PrefabInstance:
   m_ObjectHideFlags: 0

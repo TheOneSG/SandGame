@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
   teamNumber: 0
-  gameTitle: 
-  gameIcon: {fileID: 0}
-  prompt: 
+  gameTitle: I LOVE EATING SAND
+  gameIcon: {fileID: 21300000, guid: 33595db2a54a53541beda55080c44ad9, type: 3}
+  prompt: EAT
   singlePlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
   twoPlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
   controls: []

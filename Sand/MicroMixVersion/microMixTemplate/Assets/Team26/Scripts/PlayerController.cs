@@ -45,39 +45,54 @@ namespace team26 {
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context) {
 
-            animator.SetTrigger("Left");
-            //Debug.Log("eat sand! button 1");
-            if (lastButton == 2)
+            if (mySandcastle.GetComponent<Sandcastle>().sandLeft > 0)
             {
-                mySandcastle.GetComponent<Sandcastle>().eatSand(20);
-                score += 20;
+                animator.SetTrigger("Left");
+                //Debug.Log("eat sand! button 1");
+                if (lastButton == 2)
+                {
+                    mySandcastle.GetComponent<Sandcastle>().eatSand(2);
+                    score += 2;
+                }
+                else
+                {
+                    mySandcastle.GetComponent<Sandcastle>().eatSand(1);
+                    score += 1;
+                }
+                lastButton = 1;
             }
             else
             {
-                mySandcastle.GetComponent<Sandcastle>().eatSand(10);
-                score += 10;
+                p2Score = otherPlayer.GetComponent<PlayerController>().score;
+                winDecider.GetComponent<PlayerWinScreen>().setWinner(score, p2Score);
             }
-            lastButton = 1;
         }
 
         protected override void OnButton2Pressed(InputAction.CallbackContext context)
         {
-
-            animator.SetTrigger("Right");
-            //Debug.Log("eat sand! button 2");
-            if (lastButton == 1)
+            if (mySandcastle.GetComponent<Sandcastle>().sandLeft > 0)
             {
-                mySandcastle.GetComponent<Sandcastle>().eatSand(50);
-                score += 20;
-            }
-            else
-            {
-                mySandcastle.GetComponent<Sandcastle>().eatSand(25);
-                score += 10;
-            }
-            
+                animator.SetTrigger("Right");
+                //Debug.Log("eat sand! button 2");
+                if (lastButton == 1)
+                {
+                    mySandcastle.GetComponent<Sandcastle>().eatSand(2);
+                    score += 2;
+                }
+                else
+                {
+                    mySandcastle.GetComponent<Sandcastle>().eatSand(1);
+                    score += 1;
+                }
 
-            lastButton = 2;
+
+                lastButton = 2;
+            }
+            else 
+            {
+                p2Score = otherPlayer.GetComponent<PlayerController>().score;
+                winDecider.GetComponent<PlayerWinScreen>().setWinner(score, p2Score);
+            }
         }
         protected override void OnTimesUp()
         {
