@@ -18,7 +18,7 @@ namespace team26 {
         public GameObject mySandcastle;
         public TextMeshProUGUI myScore;
         private int lastButton; 
-        Animator animator;
+        public Animator animator;
         public GameObject otherPlayer;
         public GameObject winDecider;
 
@@ -29,8 +29,7 @@ namespace team26 {
     
         {
             score = 0; 
-            animator = GetComponent<Animator>();
-       
+            
         }
 
         
