@@ -22,7 +22,6 @@ namespace team26 {
         public GameObject otherPlayer;
         public GameObject winDecider;
 
-        private int lastButton;
         private float p2Score;
         
         
