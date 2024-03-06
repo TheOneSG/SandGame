@@ -23,6 +23,7 @@ namespace team26 {
         public GameObject mouthSand;
         public GameObject arm1Sand;
         public GameObject arm2Sand;
+        public GameObject myBody;
 
         private float p2Score;
         
@@ -30,15 +31,23 @@ namespace team26 {
         void Start()
     
         {
-            score = 0; 
+            
             
         }
+        protected override void OnGameStart()
+        {
 
-        
+            // Code to execute when the microgame starts.
 
-    // Update is called once per frame
-    
-       
+            // If you want to check who’s playing, here’s how:
+
+        }
+
+
+
+        // Update is called once per frame
+
+
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context) {
 

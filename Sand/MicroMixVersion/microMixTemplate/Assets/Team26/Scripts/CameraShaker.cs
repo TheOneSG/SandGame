@@ -31,5 +31,9 @@ namespace team26 {
            
         
           }
+        protected override void OnTimesUp()
+        {
+            intensity = 0;
+        }
     }       
 }

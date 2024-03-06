@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace team26
 {
-    public class IntensityLineController : MonoBehaviour
+    public class IntensityLineController : MicrogameInputEvents
     {
         public float intensityBreakpoint;
         // Start is called before the first frame update
@@ -20,7 +20,15 @@ namespace team26
             if(CameraShaker.intensity > intensityBreakpoint)
             {
                 myParticleSys.SetActive(true);
+            }else
+            if (CameraShaker.intensity < intensityBreakpoint)
+            {
+                myParticleSys.SetActive(false);
             }
+        }
+        protected override void OnTimesUp()
+        {
+            myParticleSys.SetActive(false);
         }
     }
 }
