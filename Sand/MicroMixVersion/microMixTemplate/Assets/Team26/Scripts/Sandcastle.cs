@@ -41,7 +41,7 @@ namespace team26
                 scaleDiff = 0;
             }
 
-            if (sandLeft < 5)
+            if (sandLeft < 0)
             {
                 Debug.Log("castlechange5");
                 castleStateObjects[4].SetActive(false);

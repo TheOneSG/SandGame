@@ -19,7 +19,7 @@ namespace team26
         private bool moveEnd = false;
 
         public float timer = 0;
-        public int speed = 8;
+        public int speed = 4;
         public float defaultX = 3f;
         public float defaultX2 = 2.66f;
 
@@ -104,7 +104,7 @@ namespace team26
                     if (Face.transform.position.x > -defaultX)
                     {
                         //Moves at specified rate
-                        Face.transform.position += Vector3.left;
+                        Face.transform.position += Vector3.left * Time.deltaTime * speed;
                     }
                     else
                     {
@@ -139,7 +139,7 @@ namespace team26
                 {
                     if (Face.transform.position.x < defaultX)
                     {
-                        Face.transform.position += Vector3.right;
+                        Face.transform.position += Vector3.right * Time.deltaTime * speed;
                     }
                     else
                     {
