@@ -6,6 +6,11 @@ namespace team26 {
     public class CameraShaker : MicrogameInputEvents
     {
         public static float intensity;
+        public GameObject camfocus;
+        private float differenceX;
+        private float differenceY;
+        
+        
        // Start is called before the first frame update
          void Start()
          {
@@ -19,7 +24,12 @@ namespace team26 {
             {
                 intensity -= Time.deltaTime*4;
             }
-            
+           
+                differenceX = camfocus.transform.position.x - transform.position.x;
+                differenceY = camfocus.transform.position.y - transform.position.y;
+                transform.position = new Vector3(transform.position.x + differenceX * 6 * Time.deltaTime, transform.position.y + differenceY * 6 * Time.deltaTime, transform.position.z);
+           
+        
           }
     }       
 }

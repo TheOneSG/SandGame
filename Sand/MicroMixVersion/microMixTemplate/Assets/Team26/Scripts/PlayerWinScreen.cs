@@ -39,12 +39,12 @@ namespace team26
         {
             if (Face == null)
             {
-                Debug.LogError("Empty Face");
+                //Debug.LogError("Empty Face");
             }
 
             if (Crying == null)
             {
-                Debug.LogError("Empty Crying");
+               // Debug.LogError("Empty Crying");
             }
 
             winnerDecided = false;
@@ -65,13 +65,15 @@ namespace team26
                 //Sets default positions for win player 1
                 if (winner == 1)
                 {
+                    CameraShaker.intensity = 0;
                     //Activates Faces
-                    Face.SetActive(true);
-                    Crying.SetActive(true);
+                    //Face.SetActive(true);
+                    //Crying.SetActive(true);
 
                     //Places faces
                     Face.transform.position = new Vector3(defaultX, 1.6f, -3);
                     Crying.transform.position = new Vector3(defaultX2, -0.14f, -2);
+
 
                     //Runs Victory animation
                     winnerDecided = true;
@@ -80,9 +82,10 @@ namespace team26
                 //Sets default positions for win player 2
                 if (winner == 2)
                 {
+                    CameraShaker.intensity = 0;
                     //Activates faces
-                    Face.SetActive(true);
-                    Crying.SetActive(true);
+                    //Face.SetActive(true);
+                    //Crying.SetActive(true);
 
                     //Places faces
                     Face.transform.position = new Vector3(-defaultX, 1.6f, -3);
@@ -96,8 +99,9 @@ namespace team26
             //Runs this when winner has been decided
             else
             {
-                CameraShaker.intensity = 0;
+                
                 ReportGameCompletedEarly();
+                CameraShaker.intensity = 0;
 
                 if (winner == 1)
                 {
@@ -105,12 +109,14 @@ namespace team26
                     if (Face.transform.position.x > -defaultX)
                     {
                         //Moves at specified rate
-                        Face.transform.position += Vector3.left * Time.deltaTime * speed;
+                        Face.transform.position += Vector3.left;
                     }
                     else
                     {
                         //Ends movement loop
                         moveEnd = true;
+                        Face.SetActive(true);
+                        Crying.SetActive(true);
                     }
 
                     if (moveEnd == true)
@@ -130,7 +136,7 @@ namespace team26
                         if (timer > 2)
                         {
                             //End Scene
-                            Debug.Log("Scene End");
+                            //Debug.Log("Scene End");
                         }
                     }
                 }
@@ -140,11 +146,13 @@ namespace team26
                 {
                     if (Face.transform.position.x < defaultX)
                     {
-                        Face.transform.position += Vector3.right * Time.deltaTime * speed;
+                        Face.transform.position += Vector3.right;
                     }
                     else
                     {
                         moveEnd = true;
+                        Face.SetActive(true);
+                        Crying.SetActive(true);
                     }
 
                     if (moveEnd == true)

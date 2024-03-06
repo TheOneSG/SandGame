@@ -16,7 +16,6 @@ namespace team26 {
         public bool amPlayer1;
         public int score;
         public GameObject mySandcastle;
-        public TextMeshProUGUI myScore;
         private int lastButton; 
         public Animator animator;
         public GameObject otherPlayer;
@@ -39,11 +38,7 @@ namespace team26 {
 
     // Update is called once per frame
     
-        void Update()    
-        {
-            myScore.text = "Score: " + score;
-    
-        }
+       
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context) {
 
