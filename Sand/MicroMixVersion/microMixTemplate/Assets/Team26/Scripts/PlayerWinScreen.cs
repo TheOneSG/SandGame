@@ -151,6 +151,7 @@ namespace team26
                         if (timer > 2)
                         {
                             //End Scene
+                            ReportGameCompletedEarly();
                             Debug.Log("Scene End");
                         }
                     }
