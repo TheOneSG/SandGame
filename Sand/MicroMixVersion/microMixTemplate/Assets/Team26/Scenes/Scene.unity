@@ -157,6 +157,8 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 473394531}
   myScore: {fileID: 109856612}
+  otherPlayer: {fileID: 1834890385}
+  winDecider: {fileID: 536807595}
 --- !u!4 &69041995
 Transform:
   m_ObjectHideFlags: 0
@@ -668,6 +670,11 @@ MonoBehaviour:
   scaleTimeFactor: 4
   sandLeft: 0
   castleStateObjects: []
+--- !u!1 &536807595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7148455865708597093, guid: ffb31fce29c7a5243859ccf92fe7bdcc, type: 3}
+  m_PrefabInstance: {fileID: 5740412179167346568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &538068152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,6 +1217,8 @@ MonoBehaviour:
   score: 0
   mySandcastle: {fileID: 280534702}
   myScore: {fileID: 900413084}
+  otherPlayer: {fileID: 69041993}
+  winDecider: {fileID: 536807595}
 --- !u!4 &1834890387
 Transform:
   m_ObjectHideFlags: 0
