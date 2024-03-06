@@ -577,6 +577,8 @@ MonoBehaviour:
   Face: {fileID: 1808091790}
   Crying: {fileID: 952247858}
   winner: 0
+  timer: 0
+  speed: 8
   defaultX: 3
   defaultX2: 2.66
 --- !u!4 &335802394
