@@ -87,6 +87,8 @@ namespace team26
             //Runs this when winner has been decided
             else
             {
+                ReportGameCompletedEarly();
+
                 if (winner == 1)
                 {
                     //Checks if it is past the proper location
@@ -146,13 +148,6 @@ namespace team26
 
                             //Deactivate child crying.getchild
                             Crying.transform.GetChild(0).gameObject.SetActive(false);
-                        }
-
-                        if (timer > 2)
-                        {
-                            //End Scene
-                            ReportGameCompletedEarly();
-                            Debug.Log("Scene End");
                         }
                     }
                 }

@@ -574,12 +574,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b8f68247e73164e9dc68cd50aef1b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getInputFrom: 0
   Face: {fileID: 1808091790}
   Crying: {fileID: 952247858}
   winner: 0
   timer: 0
   speed: 8
-  defaultX: 3
+  defaultX: 2.4
   defaultX2: 2.66
 --- !u!4 &335802394
 Transform:
@@ -1326,6 +1327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crying2
       objectReference: {fileID: 0}
+    - target: {fileID: 3445647415672494345, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4337648867539666426, guid: 14be48c72b7a1424abc0a4e28a499a24, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1353,7 +1358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 8220626703998350086, guid: f33d334f44385b4408321a004e6b64be, type: 3}
       propertyPath: m_LocalPosition.y
