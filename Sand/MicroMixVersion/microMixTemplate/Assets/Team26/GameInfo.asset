@@ -19,7 +19,11 @@ MonoBehaviour:
   prompt: FEAST
   singlePlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
   twoPlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
-  controls: []
+  controls:
+  - label: Eat
+    primary: 25
+    joiner: 0
+    secondary: 26
   rightPlayerAltControls: []
   singlePlayerScenePath: Assets/Team26/Scenes/Scene.unity
   twoPlayerScenePath: Assets/Team26/Scenes/Scene.unity
@@ -27,7 +31,7 @@ MonoBehaviour:
   - Have your sand, and eat it too!
   - Hungry for some more?
   - Great with salt!
-  bannerImage: {fileID: 0}
+  bannerImage: {fileID: 21300000, guid: c1ec7c4792c83c64c9ef5904c8d6e8d2, type: 3}
   developerCredits:
   - Joshua Hargobind
   - Nathan Tatti
