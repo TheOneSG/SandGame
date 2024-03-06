@@ -17,7 +17,7 @@ namespace team26 {
           {
             if(intensity > 0)
             {
-                intensity -= Time.deltaTime;
+                intensity -= Time.deltaTime*4;
             }
             
           }
