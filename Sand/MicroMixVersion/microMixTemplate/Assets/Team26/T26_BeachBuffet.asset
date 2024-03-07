@@ -17,8 +17,8 @@ MonoBehaviour:
   gameTitle: BEACH BUFFET
   gameIcon: {fileID: 21300000, guid: b8a5cdbb954238744956bc1ce77e1c89, type: 3}
   announcerText: FEAST
-  announcerAudioFile: Feast-RX10MDc_138-01
-  _announcerAudio: {fileID: 8300000, guid: 04ac179a7efa7354cb3df28d08bba17e, type: 3}
+  announcerAudioFile: Feast-RX10MDc_139-01
+  _announcerAudio: {fileID: 8300000, guid: b6b4d87678f102d478a7ec1391f9b75c, type: 3}
   singlePlayerScene: {fileID: 0}
   twoPlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
   controls:
