@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getInputFrom: 0
   scaleTimeFactor: 0
-  sandLeft: 0
+  sandLeft: 150
   castleStateObjects:
   - {fileID: 1586506497}
   - {fileID: 969732793}
@@ -6348,7 +6348,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -11206,7 +11206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getInputFrom: 0
   scaleTimeFactor: 4
-  sandLeft: 0
+  sandLeft: 150
   castleStateObjects:
   - {fileID: 2868661382927291440}
   - {fileID: 3116019923908959507}
@@ -12079,7 +12079,7 @@ GameObject:
   - component: {fileID: 921971110}
   - component: {fileID: 921971109}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12165,13 +12165,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921971108}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -5.568886, y: -1.98, z: 32.35}
   m_LocalScale: {x: 28.656197, y: 28.656197, z: 28.656197}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &940642508
 GameObject:
   m_ObjectHideFlags: 0
@@ -38920,7 +38920,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -43831,7 +43831,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -49175,7 +49175,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
