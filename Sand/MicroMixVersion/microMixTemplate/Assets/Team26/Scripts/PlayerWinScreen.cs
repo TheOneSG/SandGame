@@ -20,18 +20,18 @@ namespace team26
         public GameObject cheerSpeaker;
 
 
-        private bool gamendreported;
+        private bool GameCompletedEarlyCheck;
 
         private bool moveEnd = false;
 
         public float timer = 0;
         public int speed = 4;
-        public float defaultX = 3f;
-        public float defaultX2 = 2.66f;
+        public float faceShift = -2.2f;
+        public float cryShift = 2.1f;
 
-        private bool winnerDecided;
 
-        public void setWinner(float player1Score, float player2Score){
+        public void setWinner(float player1Score, float player2Score)
+        {
             if(player1Score > player2Score)
             {
                 winner = 1;
@@ -40,25 +40,19 @@ namespace team26
             {
                 winner = 2;
             }
-            }
+        }
+
         void Start()
         {
-            if (RedFace == null)
-            {
-                //Debug.LogError("Empty Face");
-            }
-
-            if (Crying == null)
-            {
-               // Debug.LogError("Empty Crying");
-            }
-
-            winnerDecided = false;
+            
             moveEnd = false;
+            GameCompletedEarlyCheck = false;
 
             RedFace.SetActive(false);
             BlueFace.SetActive(false);
             Crying.SetActive(false);
+
+            
 
 
         }
@@ -66,125 +60,129 @@ namespace team26
         // Update is called once per frame
         void Update()
         {
-            //Checks if the winner has been decided
-            if (winnerDecided == false)
-            {
-                //Sets default positions for win player 1
-                if (winner == 1)
-                {
-                    CameraShaker.intensity = 0;
-                    //Activates Faces
-                    //Face.SetActive(true);
-                    //Crying.SetActive(true);
-
-                    //Places faces
-                    BlueFace.transform.position = new Vector3(defaultX, 1.6f, -3);
-                    Crying.transform.position = new Vector3(defaultX2, -0.14f, -2);
-
-
-                    //Runs Victory animation
-                    winnerDecided = true;
-                }
-
-                //Sets default positions for win player 2
-                if (winner == 2)
-                {
-                    CameraShaker.intensity = 0;
-                    //Activates faces
-                    //Face.SetActive(true);
-                    //Crying.SetActive(true);
-
-                    //Places faces
-                    RedFace.transform.position = new Vector3(-defaultX, 1.6f, -3);
-                    Crying.transform.position = new Vector3(-defaultX2, -0.14f, -2);
-
-                    //Runs victory animation
-                    winnerDecided = true;
-                }
-            }
-
             //Runs this when winner has been decided
-            else
+            if (winner == 1)
             {
-                if (!gamendreported) {
-                    gamendreported = true;
+                timer += Time.deltaTime;
+                CameraShaker.intensity = 0;
+                //GameCompleteCheck
+                if (!GameCompletedEarlyCheck)
+                {
                     crySpeaker.GetComponent<AudioSource>().Play();
                     cheerSpeaker.GetComponent<AudioSource>().Play();
                     ReportGameCompletedEarly();
-                    CameraShaker.intensity = 0;
+                    GameCompletedEarlyCheck = true;
                 }
-                
 
-                if (winner == 1)
+
+                if (timer > 0.3)
                 {
+                    //Put Camera flash here
+
+                    //Sets blue face to be active and sets correct face
+                    BlueFace.SetActive(true);
+                    BlueFace.transform.GetChild(0).gameObject.SetActive(true);
+                    BlueFace.transform.GetChild(1).gameObject.SetActive(false);
+
+                    Crying.SetActive(true);
+                    Crying.transform.GetChild(0).gameObject.SetActive(true);
+                    Crying.transform.GetChild(1).gameObject.SetActive(false);
+
                     //Checks if it is past the proper location
-                    if (BlueFace.transform.position.x > -defaultX)
+                    if (BlueFace.transform.position.x > faceShift)
                     {
                         //Moves at specified rate
-                        BlueFace.transform.position += Vector3.left * Time.deltaTime * speed;
+                        BlueFace.transform.position += Vector3.left * Time.deltaTime;
+                        Crying.transform.position += Vector3.right * Time.deltaTime;
                     }
                     else
                     {
                         //Ends movement loop
                         moveEnd = true;
-                        BlueFace.SetActive(true);
-                        Crying.SetActive(true);
                     }
 
                     if (moveEnd == true)
                     {
                         //Switches faces at specific times then ends scene
-                        timer += Time.deltaTime;
-                        if (timer > 0.5)
+                        if (timer > 1)
                         {
 
                             //deactivate child Face.GetChild
                             BlueFace.transform.GetChild(0).gameObject.SetActive(false);
+                            BlueFace.transform.GetChild(1).gameObject.SetActive(true);
 
                             //Deactivate child crying.getchild
                             Crying.transform.GetChild(0).gameObject.SetActive(false);
-                        }
-
-                        if (timer > 2)
-                        {
-                            //End Scene
-                            //Debug.Log("Scene End");
+                            Crying.transform.GetChild(1).gameObject.SetActive(true);
                         }
                     }
                 }
+            }
 
-                //Same as winner 1 but the other direction
-                else if (winner == 2)
+            //Same as winner 1 but the other direction
+            else if (winner == 2)
+            {
+                timer += Time.deltaTime;
+                CameraShaker.intensity = 0;
+                //GameCompleteCheck
+                if (!GameCompletedEarlyCheck)
                 {
-                    if (RedFace.transform.position.x < defaultX)
+                    crySpeaker.GetComponent<AudioSource>().Play();
+                    cheerSpeaker.GetComponent<AudioSource>().Play();
+                    ReportGameCompletedEarly();
+                    GameCompletedEarlyCheck = true;
+                    Crying.transform.Rotate(0, 180, 0);
+                    RedFace.transform.Rotate(0, 180, 0);
+                }
+
+
+
+                if (timer > 0.3)
+                {
+                    //Put Camera flash here
+
+                    //Sets blue face to be active and sets correct face
+                    RedFace.SetActive(true);
+                    RedFace.transform.GetChild(0).gameObject.SetActive(true);
+                    RedFace.transform.GetChild(1).gameObject.SetActive(false);
+
+                    Crying.SetActive(true);
+                    Crying.transform.GetChild(0).gameObject.SetActive(true);
+                    Crying.transform.GetChild(1).gameObject.SetActive(false);
+
+                    //Checks if it is past the proper location
+                    if (RedFace.transform.position.x < -faceShift)
                     {
-                        RedFace.transform.position += Vector3.right *Time.deltaTime *speed;
+                        //Moves at specified rate
+                        RedFace.transform.position += Vector3.right * Time.deltaTime;
+                        Crying.transform.position += Vector3.left * Time.deltaTime;
                     }
                     else
                     {
+                        //Ends movement loop
                         moveEnd = true;
-                        RedFace.SetActive(true);
-                        Crying.SetActive(true);
                     }
 
                     if (moveEnd == true)
                     {
-                        timer += Time.deltaTime;
-                        if (timer > 0.3)
+                        //Switches faces at specific times then ends scene
+                        if (timer > 1)
                         {
 
                             //deactivate child Face.GetChild
                             RedFace.transform.GetChild(0).gameObject.SetActive(false);
+                            RedFace.transform.GetChild(1).gameObject.SetActive(true);
 
                             //Deactivate child crying.getchild
                             Crying.transform.GetChild(0).gameObject.SetActive(false);
+                            Crying.transform.GetChild(1).gameObject.SetActive(true);
                         }
                     }
                 }
-                
-                
             }
-
         }
     }
 }
+
+
+
