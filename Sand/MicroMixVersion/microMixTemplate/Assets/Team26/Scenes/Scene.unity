@@ -1207,13 +1207,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422945116}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.1139946, y: -3.4180017, z: 35.66209}
+  m_LocalRotation: {x: -0.61921746, y: -0, z: -0, w: 0.78521955}
+  m_LocalPosition: {x: 4.31, y: -1.4999993, z: 28.929998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 993642868}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -76.518, y: 0, z: 0}
 --- !u!199 &422945118
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -1259,8 +1259,8 @@ ParticleSystemRenderer:
   m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.25
-  m_MaxParticleSize: 0.25
+  m_MinParticleSize: 0.85
+  m_MaxParticleSize: 0.85
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 8
@@ -2004,7 +2004,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 14
+      value: 10
       mode: 0
       spread: 0
       speed:
@@ -6214,7 +6214,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e7a646fd451181489a424176f97510e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6238,7 +6238,7 @@ ParticleSystemRenderer:
   m_RenderMode: 3
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.29
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -7370,7 +7370,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -7480,7 +7480,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.1415925
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -12356,9 +12356,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.1484375
+    x: 0
     y: 0
-    width: 0.703125
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -12668,13 +12668,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082596943}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.1139946, y: -3.4180017, z: 35.66209}
+  m_LocalRotation: {x: -0.61921746, y: -0, z: -0, w: 0.78521955}
+  m_LocalPosition: {x: 4.31, y: -1.5, z: 28.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 50603341}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -76.518, y: 0, z: 0}
 --- !u!199 &1082596945
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -12720,8 +12720,8 @@ ParticleSystemRenderer:
   m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.25
-  m_MaxParticleSize: 0.25
+  m_MinParticleSize: 0.85
+  m_MaxParticleSize: 0.85
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 8
@@ -13465,7 +13465,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 14
+      value: 10
       mode: 0
       spread: 0
       speed:
@@ -17662,13 +17662,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110644098}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.76, y: -6, z: 35.66209}
+  m_LocalRotation: {x: -0.61921746, y: -0, z: -0, w: 0.78521955}
+  m_LocalPosition: {x: 3.9560056, y: -4.081998, z: 28.929998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1725786425}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -76.518, y: 0, z: 0}
 --- !u!199 &1110644100
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -17714,8 +17714,8 @@ ParticleSystemRenderer:
   m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.25
-  m_MaxParticleSize: 0.25
+  m_MinParticleSize: 0.85
+  m_MaxParticleSize: 0.85
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 8
@@ -18459,7 +18459,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 14
+      value: 10
       mode: 0
       spread: 0
       speed:
@@ -22692,7 +22692,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e7a646fd451181489a424176f97510e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22716,7 +22716,7 @@ ParticleSystemRenderer:
   m_RenderMode: 3
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.16
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -23848,7 +23848,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -23958,7 +23958,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.1415925
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -27475,7 +27475,7 @@ Transform:
   m_GameObject: {fileID: 1201740795}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.05, y: 1.74, z: 1.96}
+  m_LocalPosition: {x: -4.29, y: 1.74, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27520,7 +27520,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e7a646fd451181489a424176f97510e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27544,7 +27544,7 @@ ParticleSystemRenderer:
   m_RenderMode: 3
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.16
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -28676,7 +28676,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -28786,7 +28786,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.1415925
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -32303,7 +32303,7 @@ Transform:
   m_GameObject: {fileID: 1219338436}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.34, y: 1.74, z: 1.96}
+  m_LocalPosition: {x: 4.58, y: 1.74, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33829,13 +33829,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806850110}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.1139946, y: -3.4180017, z: 35.66209}
+  m_LocalRotation: {x: -0.61921746, y: -0, z: -0, w: 0.78521955}
+  m_LocalPosition: {x: 4.31, y: -1.4999993, z: 28.929998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1639493187}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -76.518, y: 0, z: 0}
 --- !u!199 &1806850112
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -33881,8 +33881,8 @@ ParticleSystemRenderer:
   m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.25
-  m_MaxParticleSize: 0.25
+  m_MinParticleSize: 0.85
+  m_MaxParticleSize: 0.85
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 8
@@ -34626,7 +34626,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 14
+      value: 10
       mode: 0
       spread: 0
       speed:
@@ -38786,7 +38786,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e7a646fd451181489a424176f97510e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38810,7 +38810,7 @@ ParticleSystemRenderer:
   m_RenderMode: 3
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.29
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -39942,7 +39942,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -40052,7 +40052,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.1415925
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -43697,7 +43697,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e7a646fd451181489a424176f97510e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43721,7 +43721,7 @@ ParticleSystemRenderer:
   m_RenderMode: 3
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.29
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -44853,7 +44853,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -44963,7 +44963,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.1415925
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -49041,7 +49041,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e7a646fd451181489a424176f97510e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -49065,7 +49065,7 @@ ParticleSystemRenderer:
   m_RenderMode: 3
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.29
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -50197,7 +50197,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -50307,7 +50307,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.1415925
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
