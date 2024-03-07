@@ -73,10 +73,7 @@ namespace team26
                 castleStateObjects[1].SetActive(true);
 
             }
-            else if (sandLeft <= 0)
-            {
-                ReportGameCompletedEarly();
-            }
+           
             
 
         }

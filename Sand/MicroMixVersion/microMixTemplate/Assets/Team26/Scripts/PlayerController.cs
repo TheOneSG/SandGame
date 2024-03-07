@@ -34,14 +34,24 @@ namespace team26 {
             
             
         }
-        protected override void OnGameStart()
+        private void Update()
         {
-
-            // Code to execute when the microgame starts.
-
-            // If you want to check who’s playing, here’s how:
-
+            if (mySandcastle.GetComponent<Sandcastle>().sandLeft <= 0)
+            {
+                if (amPlayer1)
+                {
+                    p2Score = otherPlayer.GetComponent<PlayerController>().score;
+                    winDecider.GetComponent<PlayerWinScreen>().setWinner(score, p2Score);
+                }
+                else
+                {
+                    p2Score = otherPlayer.GetComponent<PlayerController>().score;
+                    winDecider.GetComponent<PlayerWinScreen>().setWinner(p2Score, score);
+                }
+            }
         }
+
+
 
 
 
