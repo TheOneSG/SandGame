@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24fbde2c24ab1544bd81b52842e8ec5, type: 3}
+  m_Name: T26_BeachBuffet
+  m_EditorClassIdentifier: 
+  includeInRandomizer: 1
+  teamNumber: 26
+  gameTitle: BEACH BUFFET
+  gameIcon: {fileID: 21300000, guid: 33595db2a54a53541beda55080c44ad9, type: 3}
+  announcerText: FEAST
+  announcerAudioFile: Feast-RX10MDc_138-01
+  _announcerAudio: {fileID: 8300000, guid: 04ac179a7efa7354cb3df28d08bba17e, type: 3}
+  singlePlayerScene: {fileID: 0}
+  twoPlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
+  controls:
+  - label: Eat
+    primary: 25
+    joiner: 0
+    secondary: 26
+  rightPlayerAltControls: []
+  singlePlayerScenePath: 
+  twoPlayerScenePath: Assets/Team26/Scenes/Scene.unity
+  postgameMessages:
+  - Have your sand, and eat it too!
+  - Hungry for some more?
+  - Great with salt!
+  bannerImage: {fileID: 21300000, guid: d8ba81f399fbd1a4cb005bf8cded2979, type: 3}
+  developerCredits:
+  - Joshua Hargobind
+  - Nathan Tatti
+  - Juan Alarcon
+  - Jamie Burnett
+  - Lucas Diab
+  licensedWorksCredits: []
