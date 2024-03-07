@@ -71,13 +71,13 @@ namespace team26 {
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(2);
                     score += 2;
-                    CameraShaker.intensity += 2;
+                    CameraShaker.intensity += 1;
                 }
                 else
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(1);
                     score += 1;
-                    CameraShaker.intensity += 1;
+                    CameraShaker.intensity += 0.5f;
                 }
                 lastButton = 1;
             }
@@ -100,13 +100,13 @@ namespace team26 {
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(2);
                     score += 2;
-                    CameraShaker.intensity += 2;
+                    CameraShaker.intensity += 1;
                 }
                 else
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(1);
                     score += 1;
-                    CameraShaker.intensity += 1;
+                    CameraShaker.intensity += 0.5f;
                 }
 
 
