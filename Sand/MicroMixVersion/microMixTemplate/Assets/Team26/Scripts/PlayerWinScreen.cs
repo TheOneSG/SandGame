@@ -18,6 +18,7 @@ namespace team26
         public float winner = 0;
         public GameObject crySpeaker;
         public GameObject cheerSpeaker;
+        public GameObject camFlashSpeaker;
 
 
         private bool GameCompletedEarlyCheck;
@@ -71,6 +72,7 @@ namespace team26
                 {
                     crySpeaker.GetComponent<AudioSource>().Play();
                     cheerSpeaker.GetComponent<AudioSource>().Play();
+                    camFlashSpeaker.GetComponent<AudioSource>().Play();
                     ReportGameCompletedEarly();
                     GameCompletedEarlyCheck = true;
                 }
