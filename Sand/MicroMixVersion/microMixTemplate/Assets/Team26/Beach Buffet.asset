@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Beach Buffet
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
-  teamNumber: 0
+  teamNumber: 26
   gameTitle: BEACH BUFFET
   gameIcon: {fileID: 21300000, guid: 33595db2a54a53541beda55080c44ad9, type: 3}
-  prompt: FEAST
+  announcerText: FEAST
+  announcerAudioFile: Feast-RX10MDc_138-01
+  _announcerAudio: {fileID: 8300000, guid: 04ac179a7efa7354cb3df28d08bba17e, type: 3}
   singlePlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
   twoPlayerScene: {fileID: 102900000, guid: b83f6744faebaa64e95da35e7d9f8b7b, type: 3}
   controls:
