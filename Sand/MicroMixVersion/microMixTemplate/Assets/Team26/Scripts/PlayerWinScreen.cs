@@ -52,6 +52,8 @@ namespace team26
             BlueFace.SetActive(false);
             Crying.SetActive(false);
 
+            
+
 
         }
 
@@ -129,6 +131,8 @@ namespace team26
                     cheerSpeaker.GetComponent<AudioSource>().Play();
                     ReportGameCompletedEarly();
                     GameCompletedEarlyCheck = true;
+                    Crying.transform.Rotate(0, 180, 0);
+                    RedFace.transform.Rotate(0, 180, 0);
                 }
 
 
@@ -141,19 +145,17 @@ namespace team26
                     RedFace.SetActive(true);
                     RedFace.transform.GetChild(0).gameObject.SetActive(true);
                     RedFace.transform.GetChild(1).gameObject.SetActive(false);
-                    RedFace.transform.Rotate(0, 180, 0);
 
                     Crying.SetActive(true);
                     Crying.transform.GetChild(0).gameObject.SetActive(true);
                     Crying.transform.GetChild(1).gameObject.SetActive(false);
-                    Crying.transform.Rotate(0, 180, 0);
 
                     //Checks if it is past the proper location
-                    if (RedFace.transform.position.x > faceShift)
+                    if (RedFace.transform.position.x < -faceShift)
                     {
                         //Moves at specified rate
-                        RedFace.transform.position += Vector3.left * Time.deltaTime;
-                        Crying.transform.position += Vector3.right * Time.deltaTime;
+                        RedFace.transform.position += Vector3.right * Time.deltaTime;
+                        Crying.transform.position += Vector3.left * Time.deltaTime;
                     }
                     else
                     {
