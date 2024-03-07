@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace team26
 {
-    public class PlayerWinScreen : MicrogameInputEvents
+    public class PlayerWinScreen : MicrogameEvents
     {
         // Start is called before the first frame update
 
@@ -16,6 +16,7 @@ namespace team26
         public GameObject RedFace;
         public GameObject BlueFace;
         public float winner = 0;
+        private bool gamendreported;
 
         private bool moveEnd = false;
 
@@ -101,9 +102,12 @@ namespace team26
             //Runs this when winner has been decided
             else
             {
+                if (!gamendreported) {
+                    gamendreported = true;
+                    ReportGameCompletedEarly();
+                    CameraShaker.intensity = 0;
+                }
                 
-                ReportGameCompletedEarly();
-                CameraShaker.intensity = 0;
 
                 if (winner == 1)
                 {
@@ -171,6 +175,8 @@ namespace team26
                         }
                     }
                 }
+                
+                
             }
 
         }
