@@ -29,6 +29,8 @@ namespace team26
         public float faceShift = -2.2f;
         public float cryShift = 2.1f;
 
+        public Animator animator;
+
 
         public void setWinner(float player1Score, float player2Score)
         {
@@ -52,8 +54,6 @@ namespace team26
             BlueFace.SetActive(false);
             Crying.SetActive(false);
 
-            
-
 
         }
 
@@ -63,6 +63,7 @@ namespace team26
             //Runs this when winner has been decided
             if (winner == 1)
             {
+                animator.SetTrigger("Flash");
                 timer += Time.deltaTime;
                 CameraShaker.intensity = 0;
                 //GameCompleteCheck
@@ -77,7 +78,6 @@ namespace team26
 
                 if (timer > 0.3)
                 {
-                    //Put Camera flash here
 
                     //Sets blue face to be active and sets correct face
                     BlueFace.SetActive(true);
@@ -122,6 +122,7 @@ namespace team26
             //Same as winner 1 but the other direction
             else if (winner == 2)
             {
+                animator.SetTrigger("Flash");
                 timer += Time.deltaTime;
                 CameraShaker.intensity = 0;
                 //GameCompleteCheck
@@ -139,7 +140,6 @@ namespace team26
 
                 if (timer > 0.3)
                 {
-                    //Put Camera flash here
 
                     //Sets blue face to be active and sets correct face
                     RedFace.SetActive(true);

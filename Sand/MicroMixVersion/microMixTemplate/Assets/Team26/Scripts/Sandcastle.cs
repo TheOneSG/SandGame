@@ -46,26 +46,26 @@ namespace team26
                 castleStateObjects[4].SetActive(false);
 
             }
-            else if (sandLeft < 30)
+            else if (sandLeft < 40)
             {
                 //Debug.Log("castlechange4");
                 castleStateObjects[3].SetActive(false);
                 castleStateObjects[4].SetActive(true);
             }
-            else if (sandLeft < 60)
+            else if (sandLeft < 80)
             {
                // Debug.Log("castlechange3");
                 castleStateObjects[2].SetActive(false);
                 castleStateObjects[3].SetActive(true);
             }
-            else if (sandLeft < 90)
+            else if (sandLeft < 120)
             {
                // Debug.Log("castlechange2");
                 castleStateObjects[1].SetActive(false);
                 castleStateObjects[2].SetActive(true);
 
             }
-            else if (sandLeft < 120)
+            else if (sandLeft < 160)
             {
                // Debug.Log("castlechange1");
                 castleStateObjects[0].SetActive(false);
