@@ -20,7 +20,6 @@ namespace team26
         scaleTimeFactor = 4;
         scaleTarget = 1;
         scaleDiff = 0;
-        sandLeft = 100;
         foreach (GameObject i in castleStateObjects){
                 i.SetActive(false);
             } 
@@ -41,42 +40,39 @@ namespace team26
                 scaleDiff = 0;
             }
 
-            if (sandLeft < 0)
+            if (sandLeft <= 0)
             {
                 //Debug.Log("castlechange5");
                 castleStateObjects[4].SetActive(false);
 
             }
-            else if (sandLeft < 20)
+            else if (sandLeft < 30)
             {
                 //Debug.Log("castlechange4");
                 castleStateObjects[3].SetActive(false);
                 castleStateObjects[4].SetActive(true);
             }
-            else if (sandLeft < 40)
+            else if (sandLeft < 60)
             {
                // Debug.Log("castlechange3");
                 castleStateObjects[2].SetActive(false);
                 castleStateObjects[3].SetActive(true);
             }
-            else if (sandLeft < 60)
+            else if (sandLeft < 90)
             {
                // Debug.Log("castlechange2");
                 castleStateObjects[1].SetActive(false);
                 castleStateObjects[2].SetActive(true);
 
             }
-            else if (sandLeft < 80)
+            else if (sandLeft < 120)
             {
                // Debug.Log("castlechange1");
                 castleStateObjects[0].SetActive(false);
                 castleStateObjects[1].SetActive(true);
 
             }
-            else if (sandLeft <= 0)
-            {
-                ReportGameCompletedEarly();
-            }
+           
             
 
         }

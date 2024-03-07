@@ -24,24 +24,38 @@ namespace team26 {
         public GameObject arm1Sand;
         public GameObject arm2Sand;
         public GameObject myBody;
+        public GameObject sandSpeaker;
+        //public GameObject dingSpeaker;
+
+        private SandAudioManager sandManager;
+        //private AudioSource dingSource;
 
         private float p2Score;
         
         
         void Start()
-    
         {
-            
-            
+            //dingSource = dingSpeaker.GetComponent<AudioSource>();
+            sandManager = sandSpeaker.GetComponent<SandAudioManager>();
         }
-        protected override void OnGameStart()
+        private void Update()
         {
-
-            // Code to execute when the microgame starts.
-
-            // If you want to check who’s playing, here’s how:
-
+            if (mySandcastle.GetComponent<Sandcastle>().sandLeft <= 0)
+            {
+                if (amPlayer1)
+                {
+                    p2Score = otherPlayer.GetComponent<PlayerController>().score;
+                    winDecider.GetComponent<PlayerWinScreen>().setWinner(score, p2Score);
+                }
+                else
+                {
+                    p2Score = otherPlayer.GetComponent<PlayerController>().score;
+                    winDecider.GetComponent<PlayerWinScreen>().setWinner(p2Score, score);
+                }
+            }
         }
+
+
 
 
 
@@ -51,6 +65,8 @@ namespace team26 {
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context) {
 
+
+            sandManager.PlaySandEatingSound();
             if (mySandcastle.GetComponent<Sandcastle>().sandLeft > 0)
             {
                 animator.SetTrigger("Left");
@@ -61,13 +77,13 @@ namespace team26 {
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(2);
                     score += 2;
-                    CameraShaker.intensity += 2;
+                    CameraShaker.intensity += 1;
                 }
                 else
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(1);
                     score += 1;
-                    CameraShaker.intensity += 1;
+                    CameraShaker.intensity += 0.5f;
                 }
                 lastButton = 1;
             }
@@ -90,13 +106,13 @@ namespace team26 {
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(2);
                     score += 2;
-                    CameraShaker.intensity += 2;
+                    CameraShaker.intensity += 1;
                 }
                 else
                 {
                     mySandcastle.GetComponent<Sandcastle>().eatSand(1);
                     score += 1;
-                    CameraShaker.intensity += 1;
+                    CameraShaker.intensity += 0.5f;
                 }
 
 
