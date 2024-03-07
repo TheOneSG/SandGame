@@ -9,11 +9,12 @@ namespace team26
     {
         // Start is called before the first frame update
 
-        public GameObject Face;
         //default p1 2.3, 1.6, -3
         //End -4.6, 1.6, -3
         public GameObject Crying;
         //default  - 2.66, -0.14, -2
+        public GameObject RedFace;
+        public GameObject BlueFace;
         public float winner = 0;
 
         private bool moveEnd = false;
@@ -37,7 +38,7 @@ namespace team26
             }
         void Start()
         {
-            if (Face == null)
+            if (RedFace == null)
             {
                 //Debug.LogError("Empty Face");
             }
@@ -50,7 +51,8 @@ namespace team26
             winnerDecided = false;
             moveEnd = false;
 
-            Face.SetActive(false);
+            RedFace.SetActive(false);
+            BlueFace.SetActive(false);
             Crying.SetActive(false);
 
 
@@ -71,7 +73,7 @@ namespace team26
                     //Crying.SetActive(true);
 
                     //Places faces
-                    Face.transform.position = new Vector3(defaultX, 1.6f, -3);
+                    BlueFace.transform.position = new Vector3(defaultX, 1.6f, -3);
                     Crying.transform.position = new Vector3(defaultX2, -0.14f, -2);
 
 
@@ -88,7 +90,7 @@ namespace team26
                     //Crying.SetActive(true);
 
                     //Places faces
-                    Face.transform.position = new Vector3(-defaultX, 1.6f, -3);
+                    RedFace.transform.position = new Vector3(-defaultX, 1.6f, -3);
                     Crying.transform.position = new Vector3(-defaultX2, -0.14f, -2);
 
                     //Runs victory animation
@@ -106,16 +108,16 @@ namespace team26
                 if (winner == 1)
                 {
                     //Checks if it is past the proper location
-                    if (Face.transform.position.x > -defaultX)
+                    if (BlueFace.transform.position.x > -defaultX)
                     {
                         //Moves at specified rate
-                        Face.transform.position += Vector3.left;
+                        BlueFace.transform.position += Vector3.left * Time.deltaTime * speed;
                     }
                     else
                     {
                         //Ends movement loop
                         moveEnd = true;
-                        Face.SetActive(true);
+                        BlueFace.SetActive(true);
                         Crying.SetActive(true);
                     }
 
@@ -127,7 +129,7 @@ namespace team26
                         {
 
                             //deactivate child Face.GetChild
-                            Face.transform.GetChild(0).gameObject.SetActive(false);
+                            BlueFace.transform.GetChild(0).gameObject.SetActive(false);
 
                             //Deactivate child crying.getchild
                             Crying.transform.GetChild(0).gameObject.SetActive(false);
@@ -144,14 +146,14 @@ namespace team26
                 //Same as winner 1 but the other direction
                 else if (winner == 2)
                 {
-                    if (Face.transform.position.x < defaultX)
+                    if (RedFace.transform.position.x < defaultX)
                     {
-                        Face.transform.position += Vector3.right;
+                        RedFace.transform.position += Vector3.right *Time.deltaTime *speed;
                     }
                     else
                     {
                         moveEnd = true;
-                        Face.SetActive(true);
+                        RedFace.SetActive(true);
                         Crying.SetActive(true);
                     }
 
@@ -162,7 +164,7 @@ namespace team26
                         {
 
                             //deactivate child Face.GetChild
-                            Face.transform.GetChild(0).gameObject.SetActive(false);
+                            RedFace.transform.GetChild(0).gameObject.SetActive(false);
 
                             //Deactivate child crying.getchild
                             Crying.transform.GetChild(0).gameObject.SetActive(false);
