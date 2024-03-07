@@ -24,15 +24,19 @@ namespace team26 {
         public GameObject arm1Sand;
         public GameObject arm2Sand;
         public GameObject myBody;
+        public GameObject sandSpeaker;
+        //public GameObject dingSpeaker;
+
+        private SandAudioManager sandManager;
+        //private AudioSource dingSource;
 
         private float p2Score;
         
         
         void Start()
-    
         {
-            
-            
+            //dingSource = dingSpeaker.GetComponent<AudioSource>();
+            sandManager = sandSpeaker.GetComponent<SandAudioManager>();
         }
         private void Update()
         {
@@ -61,6 +65,8 @@ namespace team26 {
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context) {
 
+
+            sandManager.PlaySandEatingSound();
             if (mySandcastle.GetComponent<Sandcastle>().sandLeft > 0)
             {
                 animator.SetTrigger("Left");

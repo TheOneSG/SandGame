@@ -16,6 +16,10 @@ namespace team26
         public GameObject RedFace;
         public GameObject BlueFace;
         public float winner = 0;
+        public GameObject crySpeaker;
+        public GameObject cheerSpeaker;
+
+
         private bool gamendreported;
 
         private bool moveEnd = false;
@@ -104,6 +108,8 @@ namespace team26
             {
                 if (!gamendreported) {
                     gamendreported = true;
+                    crySpeaker.GetComponent<AudioSource>().Play();
+                    cheerSpeaker.GetComponent<AudioSource>().Play();
                     ReportGameCompletedEarly();
                     CameraShaker.intensity = 0;
                 }
