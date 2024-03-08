@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Team26/Scenes/TwoPlayerScene.unity
     guid: b83f6744faebaa64e95da35e7d9f8b7b
+  - enabled: 1
+    path: Assets/Team26/Scenes/SinglePLayerScene.unity
+    guid: d7aded2409f744144b8aec9389d9de5d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 28bfde271760c454b943706b4892c800, type: 2}

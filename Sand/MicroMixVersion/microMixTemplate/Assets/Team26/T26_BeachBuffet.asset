@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
   teamNumber: 26
-  gameTitle: BEACH BUFFET
-  gameIcon: {fileID: 21300000, guid: b8a5cdbb954238744956bc1ce77e1c89, type: 3}
+  gameTitle: Beach Buffet
+  gameIcon: {fileID: 21300000, guid: d07c05789358ef2459566e14126bb1d5, type: 3}
   announcerText: Feast
   announcerAudioFile: Feast-RX10MDc_139-01
   _announcerAudio: {fileID: 8300000, guid: b6b4d87678f102d478a7ec1391f9b75c, type: 3}
@@ -27,13 +27,13 @@ MonoBehaviour:
     joiner: 0
     secondary: 26
   rightPlayerAltControls: []
-  singlePlayerScenePath: Assets/Team26/Scenes/SinglePlayerScene.unity
+  singlePlayerScenePath: Assets/Team26/Scenes/SinglePLayerScene.unity
   twoPlayerScenePath: Assets/Team26/Scenes/TwoPlayerScene.unity
   postgameMessages:
   - Have your sand, and eat it too!
   - Hungry for some more?
   - Great with salt!
-  bannerImage: {fileID: 21300000, guid: d8ba81f399fbd1a4cb005bf8cded2979, type: 3}
+  bannerImage: {fileID: 21300000, guid: 935952691d3630640a5c9987d9efbb8f, type: 3}
   developerCredits:
   - Jamie Burnett
   - Joshua Hargobind
