@@ -16,7 +16,7 @@ MonoBehaviour:
   teamNumber: 26
   gameTitle: BEACH BUFFET
   gameIcon: {fileID: 21300000, guid: b8a5cdbb954238744956bc1ce77e1c89, type: 3}
-  announcerText: Feast!
+  announcerText: Feast
   announcerAudioFile: Feast-RX10MDc_139-01
   _announcerAudio: {fileID: 8300000, guid: b6b4d87678f102d478a7ec1391f9b75c, type: 3}
   singlePlayerScene: {fileID: 102900000, guid: d7aded2409f744144b8aec9389d9de5d, type: 3}
@@ -27,17 +27,39 @@ MonoBehaviour:
     joiner: 0
     secondary: 26
   rightPlayerAltControls: []
-  singlePlayerScenePath: Assets/Team26/Scenes/SinglePLayerScene.unity
-  twoPlayerScenePath: Assets/Team26/Scenes/Scene.unity
+  singlePlayerScenePath: Assets/Team26/Scenes/SinglePlayerScene.unity
+  twoPlayerScenePath: Assets/Team26/Scenes/TwoPlayerScene.unity
   postgameMessages:
   - Have your sand, and eat it too!
   - Hungry for some more?
   - Great with salt!
   bannerImage: {fileID: 21300000, guid: d8ba81f399fbd1a4cb005bf8cded2979, type: 3}
   developerCredits:
-  - Joshua Hargobind
-  - Nathan Tatti
-  - Juan Alarcon
   - Jamie Burnett
+  - Joshua Hargobind
+  - Juan Alarcon
   - Lucas Diab
-  licensedWorksCredits: []
+  - Nathan Tatti
+  - Chris A-L
+  - Claudia Rando
+  licensedWorksCredits:
+  - titleOfWork: Game-Ready Stickman Blender Rig
+    creator: Ahmad Salem
+    source: Gumroad
+    url: https://ahmadsalem3d.gumroad.com/l/OLKVW
+    licence: Free Use Gumroad License
+  - titleOfWork: Free Stylized Skybox
+    creator: Yuki2022
+    source: Unity Store
+    url: https://assetstore.unity.com/packages/2d/textures-materials/sky/free-stylized-skybox-212257
+    licence: Extension Asset
+  - titleOfWork: URP Stylized Water Shader - Proto Series
+    creator: BitGem
+    source: Unity Store
+    url: https://assetstore.unity.com/packages/vfx/shaders/urp-stylized-water-shader-proto-series-187485
+    licence: Extension Asset
+  - titleOfWork: camera
+    creator: irinairinafomicheva
+    source: Pixabay
+    url: https://pixabay.com/sound-effects/camera-13695/
+    licence: Pixabay Content License
