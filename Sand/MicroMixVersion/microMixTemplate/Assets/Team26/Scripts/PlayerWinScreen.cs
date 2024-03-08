@@ -132,6 +132,7 @@ namespace team26
                 {
                     crySpeaker.GetComponent<AudioSource>().Play();
                     cheerSpeaker.GetComponent<AudioSource>().Play();
+                    camFlashSpeaker.GetComponent<AudioSource>().Play();
                     ReportGameCompletedEarly();
                     GameCompletedEarlyCheck = true;
                     Crying.transform.Rotate(0, 180, 0);
