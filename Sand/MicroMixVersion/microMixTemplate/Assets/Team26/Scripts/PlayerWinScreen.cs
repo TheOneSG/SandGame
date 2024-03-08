@@ -39,7 +39,7 @@ namespace team26
             {
                 winner = 1;
             }
-            else
+            else if(player2Score > player1Score)
             {
                 winner = 2;
             }
